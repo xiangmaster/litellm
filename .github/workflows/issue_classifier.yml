@@ -25,10 +25,6 @@ on:
 
 permissions: {}
 
-# Runs for one issue queue instead of cancelling, so an edit during the first run never cuts the label step short
-concurrency:
-  group: issue-classifier-${{ github.event.issue.number || github.event.inputs.issue_number || github.run_id }}
-  cancel-in-progress: false
 
 jobs:
   classify-issue-tests:
