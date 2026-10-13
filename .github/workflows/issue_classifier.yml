@@ -55,7 +55,7 @@ jobs:
     # An edit to a labelled issue is dropped here; the script decides the rest against the live labels
     if: >-
       github.event_name != 'pull_request'
-      && github.repository == 'BerriAI/litellm'
+      && github.repository == 'xiangmaster/litellm'
       && (
         github.event.action != 'edited'
         || !contains(join(github.event.issue.labels.*.name, ','), 'domain:')
